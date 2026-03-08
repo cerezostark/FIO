@@ -237,18 +237,18 @@ body {
   transform: translate(-50%, -100%);
   width: 8vmin;
   height: 8vmin;
-  background-color: #6bf0ff;
+  background-color: #ff6bf0;
   filter: blur(10vmin);
 }
 .flower__leaf {
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 8vmin;
-  height: 11vmin;
-  border-radius: 51% 49% 47% 53%/44% 45% 55% 69%;
-  background-color: #65e6cc;
-  background-image: linear-gradient(to top, #40bbab, #a7ffee);
+  width: 9vmin;
+  height: 10vmin;
+  border-radius: 40% 60% 50% 50%/50% 50% 60% 40%;
+  background-color: #d165e6;
+  background-image: linear-gradient(to top, #9f40bb, #ffa7f4);
   transform-origin: bottom center;
   opacity: 0.9;
   box-shadow: inset 0 0 2vmin rgba(255, 255, 255, 0.5);
@@ -263,12 +263,12 @@ body {
   transform: translate(-90%, 0%) rotateY(45deg) rotateX(50deg);
 }
 .flower__leaf--4 {
-  width: 8vmin;
-  height: 8vmin;
+  width: 9vmin;
+  height: 9vmin;
   transform-origin: bottom left;
-  border-radius: 4vmin 10vmin 4vmin 4vmin;
+  border-radius: 4vmin 10vmin 5vmin 5vmin;
   transform: translate(0%, 18%) rotateX(70deg) rotate(-43deg);
-  background-image: linear-gradient(to top, #39c6d6, #a7ffee);
+  background-image: linear-gradient(to top, #8a39d6, #ffa7f4);
   z-index: 1;
   opacity: 0.8;
 }
