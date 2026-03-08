@@ -49,19 +49,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     let isPlaying = false;
+    const playBtn = document.getElementById('play-btn');
+
     const handlePlayPause = () => {
         if (!isPlaying) {
             audio.play().catch(err => console.log("Esperando interacción..."));
             isPlaying = true;
+            playBtn.classList.add('hidden');
         } else {
             audio.pause();
             isPlaying = false;
+            playBtn.classList.remove('hidden');
         }
     };
     
-    // Agregar ambos tipos de eventos para móvil/desktop
-    document.body.addEventListener('click', handlePlayPause);
-    document.body.addEventListener('touchstart', handlePlayPause);
+    // Escuchar los eventos nativos del audio por si el usuario usa los controles predeterminados
+    audio.addEventListener('play', () => {
+        isPlaying = true;
+        playBtn.classList.add('hidden');
+    });
+
+    audio.addEventListener('pause', () => {
+        isPlaying = false;
+        playBtn.classList.remove('hidden');
+    });
+
+    // Agregar el evento al botón dedicado en lugar de usar todo el cuerpo (body)
+    if(playBtn) {
+        playBtn.addEventListener('click', handlePlayPause);
+    }
 
     audio.addEventListener('timeupdate', () => {
         const currentTime = audio.currentTime;
