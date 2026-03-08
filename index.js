@@ -5,70 +5,26 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Array con los tiempos en segundos para cada línea de la letra
     const lyricTimes = [
-9.1,	// “A veces hablamos hasta tan tarde”
-14.1,	// “Que abro los ojos y el Sol ya sale”
-17,	// “Me dan igual tus ojeras de mañana”
-21.1,	// “Si podemos hablar”
-23,	// “Si podemos ah-oh”
-26,	// “Y cuando bailo sola en los bares”
-29,	// “Quiero que juntas vayamos a Marte”
-34,	// “Me haré astronauta iré”
-36,	// “A la Luna o lo que sea”
-37,	// “Si así puedo verte bien”
-39,	// “Puedo verte bien”
-41.5,	// “Si así puedo verte bien”
-43.1,	// “Puedo verte bien, bien”
-45,	// “Si así puedo verte bien”
-47,	// “Puedo verte bien, bien”
-49,	// “Si así puedo verte bien”
-51,	// “Puedo verte bien, bien”
-53,	// “Si así puedo verte bien”
-55,	// “Puedo verte bien cerca”
-58,	// “A veces siento que no entiendo nada”
-62,	// “Y se me queda la lengua trabada”
-66,	// “Y cuando intento explicarte que me pasa”
-69.1,	// “Si te tengo delante”
-71.1,	// “No puedo concentrarme”
-74.2,	// “Y cuando bailo sola en los bares”
-78,	// “Quiero que juntas”
-79,	// “Vayamos a Marte”
-82,	// “Me haré astronauta iré”
-84,	// “A la Luna o lo que sea”
-85,	// “Si así puedo verte bien”
-87,	// “Puedo verte bien, bien”
-90,	// “Te escribo esta canción”
-92,	// “A corazón abierto”
-93.5,	// “Porque to’ lo que siento”
-95.5,	// “Cabe en un país entero”
-98,	// “Te escribo esta canción”
-99,	// “A corazón abierto”
-101,	// “Porque to’ lo que siento”
-103.5,	// “Cabe en un país entero”
-105.5,	// “Te escribo esta canción”
-107,	// “A corazón abierto”
-109.5,	// “Porque to’ lo que siento”
-111.5,	// “Cabe en un país entero”
-113.5,	// “Te escribo esta canción”
-115.5,	// “A corazón abierto”
-117.5,	// “Porque to’ lo que siento”
-119,	// “Cabe en un país entero”
-122,	// “Puedo verte bien”
-123.5,	// “Puedo verte bien, bien”
-125,	// “Si así puedo verte bien”
-127,	// “Puedo verte bie- bien”
-129.5,	// “Si así puedo verte bien”
-131.5,	// “Puedo verte bien, bien”
-133.1,	// “Si así puedo verte bien”
-135.5,	// “Puedo verte bien cerca”
-138,	// “Puedo verte bien”
-139.5,	// “Puedo verte bien, bien”
-141,	// “Si así puedo verte bien”
-143.5,	// “Puedo verte bie- bien”
-146,	// “Si así puedo verte bien”
-147.5,	// “Puedo verte bien, bien”
-150,	// “Si así puedo verte bien”
-151.5,	// “Puedo verte bien cerca”
 
+    12.48, // "Llevo tanto tiempo"
+    14.95, // "Soñando con verte"
+    17.50, // "Haciéndome el fuerte"
+    19.72, // "para no llamarte más"
+    22.40, // "Ya van cuatro veces"
+    25, // "No he tenido suerte"
+    27.21, // "Y aún espero que vengas a cenar"
+    31.05, // "Si te quieres divertir"
+    33.5, // "O quieres ya no sufrir"
+    36.1, // "Ven te invito"
+    37.2, // "porrito y a dormir"
+    41, // "Sal de la desilusión"
+    43.60, // "Pósate en mi colchón"
+    46, // "Ven te canto una bonita canción"
+    49.40, // "Que soñándote canté"
+    54.80, // "Tu carita dibujé"
+    59.80, // "Si vienes aquí estaré"
+    64.7, // "Pa' siempre te cuidaré"
+    72,
     ];
 
     // Verifica que el audio y el loader existan
