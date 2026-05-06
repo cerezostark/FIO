@@ -79,12 +79,45 @@ document.addEventListener('DOMContentLoaded', () => {
         playBtn.addEventListener('click', handlePlayPause);
     }
 
+    // --- FIREFLIES EFFECT ---
+    const createFireflies = () => {
+        const fireflyCount = 40; // Número de luciérnagas
+        const body = document.body;
+        
+        for (let i = 0; i < fireflyCount; i++) {
+            const firefly = document.createElement('div');
+            firefly.classList.add('firefly');
+            
+            // Posición inicial aleatoria
+            const startX = Math.random() * 100; // 0vw a 100vw
+            const startY = Math.random() * 100; // 0vh a 100vh
+            
+            // Retraso y duración aleatoria para que no se muevan al mismo tiempo
+            const delay = Math.random() * 5;
+            const floatDuration = 10 + Math.random() * 20; // 10s a 30s
+            const blinkDuration = 2 + Math.random() * 4; // 2s a 6s
+            
+            firefly.style.left = `${startX}vw`;
+            firefly.style.top = `${startY}vh`;
+            
+            // Asignar animaciones personalizadas
+            firefly.style.animation = `
+                firefly-blink ${blinkDuration}s infinite ease-in-out ${delay}s,
+                firefly-float ${floatDuration}s infinite linear ${delay}s
+            `;
+            
+            body.appendChild(firefly);
+        }
+    };
+    
+    // Llamar la función para crear luciérnagas al cargar
+    createFireflies();
+
     audio.addEventListener('timeupdate', () => {
         const currentTime = audio.currentTime;
         lyrics.forEach((lyric, index) => {
-            // Si no hay un siguiente tiempo (es la última línea), solo verificamos que haya pasado su tiempo inicial
+            // Fix logic for the last lyric line
             if (currentTime >= lyricTimes[index] && (!lyricTimes[index + 1] || currentTime < lyricTimes[index + 1])) {
-
                 lyric.classList.add('active');
     
                 if (index > 0) {
