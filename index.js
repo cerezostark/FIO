@@ -82,7 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
     audio.addEventListener('timeupdate', () => {
         const currentTime = audio.currentTime;
         lyrics.forEach((lyric, index) => {
-            if (currentTime >= lyricTimes[index] && currentTime < lyricTimes[index + 1]) {
+            // Si no hay un siguiente tiempo (es la última línea), solo verificamos que haya pasado su tiempo inicial
+            if (currentTime >= lyricTimes[index] && (!lyricTimes[index + 1] || currentTime < lyricTimes[index + 1])) {
+
                 lyric.classList.add('active');
     
                 if (index > 0) {
