@@ -1120,3 +1120,29 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
 .not-loaded * {
   animation-play-state: start !important;
 }
+
+/* --- FIREFLIES --- */
+.firefly {
+  position: fixed; /* Posición relativa a la pantalla */
+  width: 3px;
+  height: 3px;
+  background-color: #f7ff82;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 3px rgba(247, 255, 130, 0.8), 0 0 20px 5px rgba(229, 235, 91, 0.6);
+  pointer-events: none;
+  z-index: 50; /* Detrás de las flores frontales pero delante del fondo */
+  opacity: 0;
+}
+
+@keyframes firefly-blink {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes firefly-float {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(50px, -100px); }
+  50% { transform: translate(-50px, -200px); }
+  75% { transform: translate(30px, -300px); }
+  100% { transform: translate(-20px, -400px); }
+}
